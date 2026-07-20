@@ -10,4 +10,5 @@ dependencies = [
     "psycopg2-binary>=2.9.9",
     "uvicorn>=0.51.0",
     "supabase>=2.31.0",
+    "tracker_hub @ git+https://github.com/gohard-lab/tracker-hub.git"
 ]

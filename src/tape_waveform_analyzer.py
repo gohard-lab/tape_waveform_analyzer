@@ -16,6 +16,13 @@ import numpy as np
 import json
 import tempfile
 import os
+import sys
+
+# 스크립트 위치를 시스템 경로에 등록하여 모듈 탐색 보장
+current_dir = os.path.dirname(os.path.abspath(__file__))
+if current_dir not in sys.path:
+    sys.path.append(current_dir)
+
 
 # 윈도우 맑은 고딕 폰트 적용하여 글자 깨짐 방지
 plt.rcParams['font.family'] = 'Malgun Gothic'
