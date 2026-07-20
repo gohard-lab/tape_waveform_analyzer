@@ -1,3 +1,13 @@
+# app.py (Main Streamlit Application)
+# =================================================================
+# 🛡️ [STAGE 1] GLOBAL MASTER TRACKER INITIALIZATION (최상단 고정)
+# =================================================================
+# 파이썬 엔진이 스트림릿을 구우러 들어가기 전에 문지기부터 완벽하게 세웁니다.
+from tracker_hub import log_app_usage
+
+# 앱이 켜지는 순간 최초 1회만 트래킹 데이터 적재
+log_app_usage("tape_waveform_analyzer", "app_opened-1")
+
 import streamlit as st
 import librosa
 import librosa.display
@@ -6,14 +16,13 @@ import numpy as np
 import json
 import tempfile
 import os
-from tracker_hub import log_app_usage
 
 # 윈도우 맑은 고딕 폰트 적용하여 글자 깨짐 방지
 plt.rcParams['font.family'] = 'Malgun Gothic'
 plt.rcParams['axes.unicode_minus'] = False
 
 # 앱 이름 설정 및 트래커 연동용 상수
-APP_NAME = "tape_audio_analyzer"
+APP_NAME = "tape_waveform_analyzer"
 
 def init_session():
     # 세션 시작 시 최초 1회만 오픈 로그 기록
