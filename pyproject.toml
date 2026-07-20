@@ -1,0 +1,13 @@
+[project]
+name = "tape-waveform-analyzer"
+version = "0.1.0"
+description = "카세트 테이프와 디지털 음원의 주파수 비교 분석 웹 앱"
+dependencies = [
+    "streamlit>=1.35.0",
+    "librosa>=0.10.1",
+    "matplotlib>=3.8.0",
+    "numpy>=1.26.0",
+    "psycopg2-binary>=2.9.9",
+    "uvicorn>=0.51.0",
+    "supabase>=2.31.0",
+]
